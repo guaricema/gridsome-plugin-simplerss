@@ -1,0 +1,16 @@
+{
+  "name": "gridsome-plugin-simplerss",
+  "version": "1.0.0",
+  "description": "Generate an RSS feed",
+  "main": "index.js",
+  "keywords": [
+    "gridsome",
+    "rss",
+    "gridsome-plugin"
+  ],
+  "author": "Pavel Fedotov",
+  "license": "ISC",
+  "dependencies": {
+    "rss": "^1.2.2"
+  }
+}
