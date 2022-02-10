@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 module.exports = function (api, options) {
-  api.afterBuild(({ queue }) => {
+  api.afterBuild(({ queue, config }) => {
         const feed = new RSS({
             title: options.siteTitle || '',
             site_url: options.siteUrl || '',
@@ -47,7 +47,7 @@ module.exports = function (api, options) {
         articlesSorted.forEach(item => feed.item(item))
         
         const output = {
-          dir: './static/rss',
+          dir: config.outputDir + '/rss',
           name: 'index.xml'
         }
     
